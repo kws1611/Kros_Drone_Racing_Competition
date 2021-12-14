@@ -15,4 +15,5 @@ bash Tools/setup/ubuntu.sh
 sudo apt install python-pip
 sudo apt-get update
 sudo apt-get install python-jinja2 
-pip install numpy toml
+pip install numpy
+sudo -H pip2 install toml
