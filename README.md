@@ -6,7 +6,7 @@ Autonomous Drone Simulation Competition
 - 16 GB DDR4 RAM or higher
 - 500 GB SSD or higher
 - NVIDIA GeForce GTX 1660 Ti or higher
-- 5GHz wifi communication
+- 5GHz wifi communication support
 
 # PC Required Specifications
 - OS : Ubuntu 18.04
