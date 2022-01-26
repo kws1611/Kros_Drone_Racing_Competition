@@ -1,7 +1,7 @@
 cd
 git clone https://github.com/PX4/PX4-Autopilot.git
 cd PX4-Autopilot
-git switch v1.10.1
+git checkout v1.10.1
 git submodule sync --recursive
 git submodule update --init --recursive
 cd src/lib/mixer
