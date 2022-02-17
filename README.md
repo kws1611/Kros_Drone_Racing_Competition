@@ -140,11 +140,9 @@ gaussian noise added
 
 noise not added
 
-## Camera Intrinsic Parameter on Airsim
+## Camera-IMU Intrinsic & Extrinsic Parameters
 
-{ fx, fy, cx, cy } = { 240, 240, 240, 160 }
-
-No distortion Parameter
+see the file "results-imucam-camera_bag.txt"
 
 
 ## Subscriber & Publisher
