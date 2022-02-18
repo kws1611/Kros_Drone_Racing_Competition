@@ -128,6 +128,34 @@ roslaunch depth_noise depth_simple.launch
 
 # Notice
 
+## Subscriber & Publisher Guide
+|Published Topic name|type|Topic msg|
+|------|---|---|
+|/mavros/imu/data_raw|IMU sensor|sensor_msgs/Imu|
+|/mavros/imu/mag|Magnetometer|sensor_msgs/MagneticField|
+|/airsim_node/drone_1/front_center_custom/Scene|RGB Camera|sensor_msgs/Image|
+|/simulation/depth_image|Depth Camera|sensor_msgs/Image|
+|/mavros/altitude|barometer|mavros_msgs/Altitude|
+|/mavros/state|Drone's State|mavros_msgs/State|
+|/mavros/home_position/home|Home position|mavros_msgs/HomePosition|
+|/competition/ready|Restarting Proceeding or Finished|std_msgs/Bool|
+
+|Subscribed Topic name|type|Topic msg|
+|------|---|---|
+|/mavros/setpoint_velocity/cmd_vel|velocity control|geometry_msgs/Twist|
+|/mavros/setpoint_attitude/cmd_vel|attitude control|geometry_msgs/TwistStamped|
+|/mavros/setpoint_attitude/thrust|attitude control|mavros_msgs/Thrust|
+|/mavros/setpoint_attitude/attitude|attitude control|geometry_msgs/PoseStamped|
+|/mavros/setpoint_accel/accel|acceleration control|geometry_msgs/Vector3Stamped|
+|/restart_from_start|Send msg for Restarting |std_msgs/Bool|
+
+- Depth camera can measure distance upto 13m. Depth noise is added
+
+- Positioning data such as GPS is NOT provided. Use visual odometry or other pose estimation algorithm.
+
+http://wiki.ros.org/mavros
+https://microsoft.github.io/AirSim/airsim_ros_pkgs.html#using-airsim-ros-wrapper
+
 ## Noise is added
 
 Due to gaussian random noise is added to rotor thrust the drone will vibrate.
@@ -145,28 +173,6 @@ noise not added
 see the file "results-imucam-camera_bag.txt"
 
 
-## Subscriber & Publisher
-
-https://microsoft.github.io/AirSim/airsim_ros_pkgs.html#using-airsim-ros-wrapper
-
-Given topics
-
-RGB image topic from Simulation Drone
-```
-/airsim_node/drone_1/front_center_custom/Scene
-```
-Depth image topic from Simulation Drone
-```
-/simulation/depth_image
-```
-
-Depth camera can measure distance upto 13m. Depth noise is added
-
-http://wiki.ros.org/mavros
-
-- /mavros/home_position/home Topic will be provided for Home Positioning
-
-- Positioning data such as GPS is NOT provided. Use visual odometry or other pose estimation algorithm.
 
 
 ## Information about map
