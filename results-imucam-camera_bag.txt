@@ -49,7 +49,7 @@ cam0
     Rows: 6
     Cols: 6
     Size: 0.67 [m]
-    Spacing 2.01 [m]
+    Spacing 0.201 [m]
 
 
 
