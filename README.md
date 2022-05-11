@@ -142,7 +142,7 @@ roslaunch depth_noise depth_simple.launch
 
 |Subscribed Topic name|type|Topic msg|
 |------|---|---|
-|/mavros/setpoint_velocity/cmd_vel|velocity control|geometry_msgs/Twist|
+|/mavros/setpoint_velocity/cmd_vel|velocity control|geometry_msgs/TwistStamped|
 |/mavros/setpoint_attitude/cmd_vel|attitude control|geometry_msgs/TwistStamped|
 |/mavros/setpoint_attitude/thrust|attitude control|mavros_msgs/Thrust|
 |/mavros/setpoint_attitude/attitude|attitude control|geometry_msgs/PoseStamped|
